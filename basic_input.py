@@ -17,22 +17,28 @@ def basic_input():
     Напиток ягодный
     Напиток каркаде
     Компот из яблок
-    Напиток из шиповника'''.split("\n")
+    Напиток из шиповника
+    '''.split("\n")
+
+
     for i in range(6):
         addAppetizer(name = f[i])
+
     for i in range(6, 12):
         addDish(name = f[i])
     for i in range(12, 18):
         addDrink(name = f[i])
 
 
+
     apps = db.session.query(Appetizer).all()
     dshs = db.session.query(Dish).all()
     drks = db.session.query(Drink).all()
+
     for i in range(6):
         addLunch(apps[i].id, dshs[i].id, drks[i].id)
 
-    addAccount()
+    addUser()
 
 
 
