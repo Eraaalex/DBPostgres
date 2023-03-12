@@ -30,6 +30,9 @@ def addLunch(appetizer_id:Appetizer, dish_id: Dish, drink_id:Drink, likes_amount
     db.session.add(lunch)
     db.session.commit()
     return lunch
+
+def getUser(user_id):
+    return db.session.query(Users).filter_by(id = user_id).first()
 # def addAccount(login ="admin@yandex.ru", password = "qwerty1", name = "eraaalex", status = True):
 #     acc = Account(login = login, password = password, name = name, status = status)
 #     db.session.add(acc)
