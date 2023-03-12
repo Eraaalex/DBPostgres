@@ -102,7 +102,7 @@ if __name__ == '__main__':
         # basic_input()
         print("OK")
 
-    app.run(debug=True, host ='0.0.0.0:$PORT', port = 5000)
+    app.run(host ='0.0.0.0:$PORT', port = 5000)
 
 
 
