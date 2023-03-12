@@ -98,8 +98,8 @@ def page_not_found():
 flag = False
 if __name__ == '__main__':
     with app.app_context():
-        # db.create_all()
-        # basic_input()
+        db.create_all()
+        basic_input()
         print("OK")
 
     app.run(host ='0.0.0.0:$PORT', port = 5000)
